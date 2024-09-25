@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import './Register.css';
 import {useLocation} from "wouter";
 
@@ -15,7 +15,7 @@ const Register = () => {
     const [, setLocation] = useLocation();
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFormData({
             ...formData,
             [name]: value,
@@ -37,15 +37,16 @@ const Register = () => {
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Nombre:</label>
-                    <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
+                    <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required/>
                 </div>
                 <div className="form-group">
                     <label>Apellidos:</label>
-                    <input type="text" name="apellidos" value={formData.apellidos} onChange={handleChange} required />
+                    <input type="text" name="apellidos" value={formData.apellidos} onChange={handleChange} required/>
                 </div>
                 <div className="form-group">
                     <label>Fecha de Nacimiento:</label>
-                    <input type="date" name="fechaNacimiento" value={formData.fechaNacimiento} onChange={handleChange} required />
+                    <input type="date" name="fechaNacimiento" value={formData.fechaNacimiento} onChange={handleChange}
+                           required/>
                 </div>
                 <div className="form-group">
                     <label>Sexo:</label>
@@ -58,11 +59,11 @@ const Register = () => {
                 </div>
                 <div className="form-group">
                     <label>Correo Electrónico:</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required/>
                 </div>
                 <div className="form-group">
                     <label>Contraseña:</label>
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+                    <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
                 </div>
                 <button type="submit">Registrar</button>
             </form>
